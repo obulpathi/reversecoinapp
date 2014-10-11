@@ -63,11 +63,10 @@
 		</nav>
 
 
-		<section id="services">
+		<section id="terminology">
 			<div class="container">
-				<h3 class="section-title">Services</h3>
+				<h3 class="section-title">Terminology</h3>
 				<div class="section-title-border"></div>
-				<h4> Header </h4>
 				<p>
 With Reversecoin, you can create two different kinds of accounts: Standard Accounts and Reverse Accounts. Standard accounts behave very much like your Bitcoin accounts and allow you to send and receive money for daily purposes. Reverse accounts behave much like you bank savings account where you can deposit large amount of coins and keep them safe from hackers. Each vault account has a configurable timeout and is backed by two key pairs, one online and one offline. You only need online keypair to transfer coins from vault. When you transfer your coins using online keypair, your transactions get confirmed after they live for the timeout period in blockchain. If someone steals your online key pair and transfers coins, the transactions will have to wait in block chain for the timeout period. During which, you can use your offline key pair and reverse the transactions not initiated by you and restore your coins to other address. You can also use your offline key pair for immediate transfer of coins in your Reverse, instead of waiting for timeout period. In a sentence, Reverse account has the ease of use of hot wallets (online account) and security of cold wallets (offline accounts). We also provide a monitoring service, to send you real-time alerts, when coins are transferred from your addresses. To know more about Reversecoin, read our white paper or even better play with our sandboxed code, to see for yourself how Reversecoins works or watch the video below.
 			</p>
@@ -75,11 +74,10 @@ With Reversecoin, you can create two different kinds of accounts: Standard Accou
 		</section>
 
 
-		<section id="services">
+		<section id="tutorial">
 			<div class="container">
-				<h3 class="section-title">Lets play with the code</h3>
+				<h3 class="section-title">Tutorial</h3>
 				<div class="section-title-border"></div>
-				<h4> Play </h4>
 				Fire up your terminal </br>
 				Start the reversecoind </br>
 				Start the reversecoinminer </br>
@@ -92,6 +90,60 @@ With Reversecoin, you can create two different kinds of accounts: Standard Accou
 				# make vault_override </br>
 				# make vault_fast_override </br>
 
+address:
+	python newaddress.py
+</br>
+account:
+	python account.py
+</br>
+balance:
+	python balance.py
+</br>
+vaults:
+	python getvaults.py
+</br>
+blockchain:
+	python blockchain.py
+</br>
+mempool:
+	python mempool.py
+</br>
+received:
+	python received.py
+</br>
+send:
+	python send.py
+</br>
+getvault:
+	python getvault.py
+</br>
+savings:
+	python savings.py
+</br>
+vault_send:
+	python vault_send.py
+</br>
+vault_withdraw:
+	python vault_withdraw.py
+</br>
+vault_override:
+	python vault_override.py
+</br>
+vault_fast_withdraw:
+	python vault_fast_withdraw.py
+</br>
+vault_test:
+	python test_vault.py
+</br>
+pending:
+	python vault_pending.py
+</br>
+test:
+	python test.py
+</br>
+info:
+	python info.py
+</br>
 			</div>
 		</section>
 
