@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Emerald</title>
+		<title>Reversecoin</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link href="css/vendor/bootstrap.min.css" rel="stylesheet" media="screen">
 		<link href="css/vendor/magnific-popup.css" rel="stylesheet" media="screen">
 		<link href="css/vendor/font-awesome.min.css" rel="stylesheet" media="screen">
 		<link href="css/vendor/timeline.css" rel="stylesheet" media="screen">
-		<link href="css/TimeCircles.css" rel="stylesheet">  
+		<link href="css/timecircles.css" rel="stylesheet">
 		<!--
 			COLOR SCHEMES
 
@@ -216,38 +216,11 @@ Reversecoin combines best of online and offline wallets. With Reversecoin, you c
 				<h3 class="section-title">Coming Soon!</h3>
 				<div class="section-title-border"></div>
 				<div class="row text-center">
-				<div id="DateCountdown"  data-date="2015-01-01 00:00:00" ></div>
+						<div id="DateCountdown" data-date="2015-01-01 00:00:00" ></div>
 				</div>
 				<p>
-		Fundraising keep watching for news about fund raising of coin. Give it a date 30 days from now. A countdown timer +
+		Fundraising keep watching for news about fund raising of coin. Give it a date 30 days from now. A countdown timer.
 				</p>
-				<p>
-		Steal my coins challenge: To demonstrate the strength of Reversecoin to the World, we are planning âSteal my coins challengeâ, where we reveal the private keys to the everyone and challenge you to steal the associated Reversecoins. This challenge will be held a month or two after release of the mainnet.
-				</p>
-
-				<div class="row text-center">
-					<div class="col-md-2 col-md-push-2"></div>
-					<div class="col-md-2 text-center skill">
-						<input type="text" class="dial" value="90" data-width="120" data-height="130" data-fgColor="#343837"
-							data-bgColor="#e9edec" data-readOnly="true">
-						<h4>HTML</h4>
-					</div>
-					<div class="col-md-2 text-center skill">
-						<input type="text" class="dial" value="75" data-width="120" data-height="130" data-fgColor="#343837"
-							data-bgColor="#e9edec" data-readOnly="true">
-						<h4>CSS</h4>
-					</div>
-					<div class="col-md-2 text-center skill">
-						<input type="text" class="dial" value="85" data-width="120" data-height="130" data-fgColor="#343837"
-							data-bgColor="#e9edec" data-readOnly="true">
-						<h4>Javascript</h4>
-					</div>
-					<div class="col-md-2 text-center skill">
-						<input type="text" class="dial" value="50" data-width="120" data-height="130" data-fgColor="#343837"
-							data-bgColor="#e9edec" data-readOnly="true">
-						<h4>Wordpress</h4>
-					</div>
-				</div>
 
 			</div>
 		</section>
@@ -407,9 +380,17 @@ Reversecoin combines best of online and offline wallets. With Reversecoin, you c
 		<script src="js/vendor/retina-1.1.0.min.js"></script>
 		<script src="js/vendor/holder.js"></script>
 		<script src="js/main.js"></script>
-		<script type="text/javascript" src="js/TimeCircles.js"></script>
+		<script type="text/javascript" src="js/timecircles.js"></script>
 		<script>
-			$("#DateCountdown").TimeCircles();
+			$("#DateCountdown").TimeCircles({
+				animation: "ticks",
+				circle_bg_color: "#343837",
+				time: {
+					Days: { color: "#e9edec" },
+					Hours: { color: "#e9edec" },
+					Minutes: { color: "#e9edec" },
+					Seconds: { color: "#e9edec" }}});
+
 		</script>
 	</body>
 </html>
