@@ -63,67 +63,78 @@ With Reversecoin, you can create two different kinds of accounts: Standard Accou
 				<h3 class="section-title">Tutorial</h3>
 				<div class="section-title-border"></div>
 <h4>Setup</h4>
-Fire up your terminal <br>
-Start the reversecoind <br>
-Start the reversecoinminer <br>
-Get the client <br>
+Start your terminal <br>
+Start the reversecoin daemon using the command "reversecoind" <br>
+Start the reversecoinminer in another tab using the command "reversecoin-miner" <br> <br>
 
-<h4>General information and commands</h4>
-Display general information <br>
-# rwallet info <br>
-Output of information <br> <br>
+<h4>General commands</h4>
+<h5>Display general information</h5>
+$ rwallet info <br>
+Output of info <br> <br>
 
-Display account information <br>
-# rwallet account <br>
+<h5>Display account information</h5>
+$ rwallet account <br>
 Output of account <br> <br>
 
-Display balance <br>
-# rwallet balance <br>
+<h5>Display balance</h5>
+$ rwallet balance <br>
 Output of balance <br> <br>
 
-Display vault information <br>
-# rwallet getvaults <br>
+<h5>Display vault information</h5>
+$ rwallet getvaults <br>
 Output of getvaults <br> <br>
 
-Displays transactions received by an address <br>
-# rwallet received <br>
+<h5>Displays transactions received by an address</h5>
+$ rwallet received <br>
 Output of received <br> <br>
 
-Create a new address <br>
-# rwallet newaddress <br>
+<h5>Create a new address</h5>
+$ rwallet newaddress <br>
 Output of newaddress <br> <br>
 
 <h4>Send and receive coins using normal accounts</h4>
-Send coins to an address <br>
-# rwallet newaddress <br>
+
+<h5>Send coins to an address</h5>
+$ rwallet newaddress <br>
 Copy the address <br>
-# rwallet send newaddress <br>
+$ rwallet send newaddress <br>
 Output of received <br>
 Wait for a minute or two for the confirmation <br>
-# rwallet balance <br>
+$ rwallet balance <br>
 Output of balance <br> <br>
 
 <h4>Send and receive coins using vault accounts</h4>
-# rwallet getvault <br>
+<h5>First, deposit some amount into a vault </h5>
+$ rwallet vault_send amount <br>
+Output of received
+
+<h5>Check the balance of vault accounts</h5>
+$ rwallet getvaults <br>
 Output of received <br> <br>
 
-# rwallet savings <br>
+$ rwallet savings <br>
 Output of received <br> <br>
 
-# rwallet vault_send <br>
+<h5>For normal withdraw using online keys only</h5>
+$ rwallet vault_withdraw <br>
 Output of received <br> <br>
 
-# rwallet vault_withdraw <br>
+$ rwallet vault_pending.py
 Output of received <br> <br>
 
-# rwallet vault_override <br>
+<h5>Get Account <h5>
+Wait for pending transactions
+If you want the transactions to go through, just wait for the confirmation period
+Else,
+
+<h5>For overriding the transactions from vault</h5>
+$ rwallet vault_override <br>
 Output of received <br> <br>
 
-# rwallet vault_fast_override <br>
+<h5> If you want to transfer coins from your vault account fastly </h5>
+$ rwallet vault_fast_override <br>
 Output of received <br> <br>
 
-# rwallet vault_pending.py
-Output of received <br> <br>
 			</div>
 		</section>
 
