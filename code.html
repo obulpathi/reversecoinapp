@@ -10,6 +10,7 @@
 		<link href="css/vendor/timeline.css" rel="stylesheet" media="screen">
 		<link href="css/timecircles.css" rel="stylesheet">
 		<link href="css/turquoise.css" rel="stylesheet" media="screen">
+		<link href="css/custom.css" rel="stylesheet" media="screen">
 		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 		<!--[if lt IE 9]>
 			<script src="js/vendor/html5shiv.js"></script>
@@ -39,92 +40,103 @@
 		</nav>
 
 
-		<section id="code">
-			<div class="container">
-				<h3 class="section-title">Code</h3>
-				<div class="section-title-border"></div>
-				<div class="row">
-					<div class="col-sm-7">
-						<h3>Here is our proof of concept code for Reversecoin, written in Python at our Github repository: link to repository <a href="https://github.com/obulpathi/reversecoin">Github</a>.</h3>
-					</div>
-					<div class="col-sm-5 text-center">
-						<img src="images/octocat.png" alt="" class="img-responsive img-rounded" />
-					</div>
-				</div>
+<section id="code">
+	<div class="container">
+		<h3 class="section-title">Code</h3>
+		<div class="section-title-border"></div>
+		<div class="row">
+			<div class="col-sm-7">
+<p class="codetext">As a proof of concept, we created Reversecoin based on
+	<a href="https://github.com/obulpathi/bitcoinpy">Bitcoinpy</a>, first python implementation of Bitcoin.</p>
+
+<span class="codecmdmedium">&gt;&nbsp;git clone git@github.com:obulpathi/vaultcoin.git</span>
+<p> </p>
+
+<p class="source codetext">
+<i class="icon-github-alt"></i>
+Get the source code at <a href="https://github.com/obulpathi/reversecoin">Github</a>.
+</p>
 			</div>
-		</section>
-
-
-		<section id="installation">
-			<div class="container">
-				<h3 class="section-title">Installation</h3>
-				<div class="section-title-border"></div>
-				<div class="row">
-					<div class="col-sm-7">
-						<h3>Here is our proof of concept code for Reversecoin, written in Python at our Github repository: link to repository <a href="https://github.com/obulpathi/reversecoin">Github</a>.</h3>
-						Easiest way to install Reversecoin </br>
-						<i>&gt;</i> pip install vaultcoin
-					</div>
-					<div class="col-sm-5 text-center">
-						<img src="images/python.png" alt="" class="img-responsive img-rounded" />
-					</div>
-				</div>
+			<div class="col-sm-5 text-center">
+				<img src="images/octocat.png" alt="" class="img-responsive img-rounded" />
 			</div>
-		</section>
+		</div>
+	</div>
+</section>
 
 
-		<section id="configuration">
-			<div class="container">
-				<h3 class="section-title">Configuration</h3>
-				<div class="section-title-border"></div>
-				<div class="row">
-					<div class="col-sm-7">
-						<h3> Configuration: Look to ~/.bitocoinpy.cfg for configuraiton options. </h3>
-					</div>
-					<div class="col-sm-5 text-center">
-						<img src="images/configure.png" alt="" class="img-responsive img-rounded" />
-					</div>
-				</div>
+<section id="installation">
+	<div class="container">
+		<h3 class="section-title">Installation</h3>
+		<div class="section-title-border"></div>
+		<div class="row">
+			<div class="col-sm-7">
+<p class="codetextb">Install Reversecoin from PyPI, using pip:</p>
+<span class="codecmdb">&gt;&nbsp;pip install reversecoin</span>
+<p> </p>
 			</div>
-		</section>
-
-
-		<section id="test">
-			<div class="container">
-				<h3 class="section-title">Testing</h3>
-				<div class="section-title-border"></div>
-				<div class="row">
-					<div class="col-sm-7">
-						<h3> How to test?
-						tox -e py27
-						Put a big bug icon here
-						report bugs to >>>></h3>
-					</div>
-					<div class="col-sm-5 text-center">
-						<img src="images/bug.png" alt="" class="img-responsive img-rounded" />
-					</div>
-				</div>
+			<div class="col-sm-5 text-center">
+				<img src="images/python.png" alt="" class="img-responsive img-rounded" />
 			</div>
-		</section>
+		</div>
+	</div>
+</section>
 
 
-		<section id="contribute">
-			<div class="container">
-				<h3 class="section-title">Contribute</h3>
-				<div class="section-title-border"></div>
-				<div class="row">
-					<div class="col-sm-7">
-						<h3> If you want to contribute:
-						Please take a look at the open issues. For the repository, send us a pull request. Chat with us on our irc channel? G+ account page, etc ...
-						Put a big bug construct icon here
-						report bugs to >>>></h3>
-					</div>
-					<div class="col-sm-5 text-center">
-						<img src="images/build.png" alt="" class="img-responsive img-rounded" />
-					</div>
+<section id="configuration">
+	<div class="container">
+		<h3 class="section-title">Configuration</h3>
+		<div class="section-title-border"></div>
+		<div class="row">
+			<div class="col-sm-7">
+<p class="codetext">Look to ~/.bitocoinpy.cfg for configuraiton options.</p>
+
+<span class="codecmd">&gt;&nbsp;vim ~/.bitocoinpy.cfg</span>
+<p> </p>
 				</div>
+			<div class="col-sm-5 text-center">
+				<img src="images/configure.png" alt="" class="img-responsive img-rounded" />
 			</div>
-		</section>
+		</div>
+	</div>
+</section>
+
+
+<section id="test">
+	<div class="container">
+		<h3 class="section-title">Testing</h3>
+		<div class="section-title-border"></div>
+		<div class="row">
+			<div class="col-sm-7">
+<p class="codetextb">We use tox todo automated testing, give it a try with:</p>
+<span class="codecmdb">&gt;&nbsp;tox -e py27</span>
+<p> </p>
+			</div>
+			<div class="col-sm-5 text-center">
+				<img src="images/bug.png" alt="" class="img-responsive img-rounded" />
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<section id="contribute">
+	<div class="container">
+		<h3 class="section-title">Contribute</h3>
+		<div class="section-title-border"></div>
+		<div class="row">
+			<div class="col-sm-7">
+<p class="codetext">You are welcome to submit patches to Reversecoin.</p>
+
+<span class="codecmdmedium">&gt;&nbsp;git commit -m "my awesome commit"</span>
+<p> </p>
+			</div>
+			<div class="col-sm-5 text-center">
+				<img src="images/build.png" alt="" class="img-responsive img-rounded" />
+			</div>
+		</div>
+	</div>
+</section>
 
 
 		<footer>
@@ -148,7 +160,7 @@
 		<script src="js/vendor/jquery.backstretch.min.js"></script>
 		<script src="js/vendor/jquery.mixitup.js"></script>
 		<script src="js/vendor/jquery.magnific-popup.min.js"></script>
-		<script src="http://maps.google.com/maps/api/js?sensor=false&amp;libraries=geometry&amp;v=3.7"></script>
+
 		<script src="js/vendor/maplace.min.js"></script>
 		<script src="js/vendor/jquery.knob.js"></script>
 		<script src="js/vendor/jquery.scrollTo.min.js"></script>
