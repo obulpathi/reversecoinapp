@@ -43,7 +43,7 @@
 	<div class="container">
 		<h3 class="section-title">How does it work?</h3>
 		<div class="section-title-border"></div>
-		<p>With Reversecoin, you can create two different kinds of accounts: <b>Standard Accounts and Vault Accounts</b>. Standard accounts behave very much like your Bitcoin accounts and allow you to send and receive money for daily purposes. Vault accounts behave much like you bank savings account where you can deposit large amount of coins and keep them safe from hackers. Each vault account has a configurable timeout and is backed by two key pairs, one online and one offline. You only need online keypair to transfer coins from vault. When you transfer your coins using online keypair, your transactions get confirmed after they live in blockchain for the timeout period. If someone steals your online key pair and transfers coins, the transactions will have to wait in block chain for the timeout period. During which, you can use your offline key pair and reverse those transactions and restore your coins to other address. You can also use your offline key pair for immediate transfer of coins in your Vault, instead of waiting for timeout period. In a sentence, Vault account has the ease of use of hot wallets (online account) and security of cold wallets (offline accounts). We are also working on a monitoring service, to send you real-time alerts, when your coins are transferred from your addresses. To know more about Reversecoin, read our white paper or even better play with the vaultcoin, to see for yourself how Reversecoin works. In order to make it easy, the code is sandboxed and difficulty is reduced so that blocks are produced one every minute. Below is a brief tutorial to show how vaultcoin works.</p>
+		<p>With Reversecoin, you can create two different kinds of accounts: <b>Standard Accounts and Vault Accounts</b>. Standard accounts behave very much like your Bitcoin accounts and allow you to send and receive money for daily purposes. Vault accounts behave much like you bank savings account where you can deposit large amount of coins and keep them safe from hackers. Each vault account has a configurable timeout and is backed by two key pairs, one online and one offline. You only need online keypair to transfer coins from vault. When you transfer your coins using online keypair, your transactions get confirmed after they live in blockchain for the timeout period. If someone steals your online key pair and transfers coins, the transactions will have to wait in block chain for the timeout period. During which, you can use your offline key pair and reverse those transactions and restore your coins to other address. You can also use your offline key pair for immediate transfer of coins in your Vault, instead of waiting for timeout period. In a sentence, Vault account has the ease of use of hot wallets (online account) and security of cold wallets (offline accounts). We are also working on a monitoring service, to send you real-time alerts, when your coins are transferred from your addresses. To know more about Reversecoin, read our white paper or even better play with the vaultcoin, to see for yourself how Reversecoin works. In order to make it easy, the code is sandboxed and difficulty is reduced so that blocks are produced one every minute. Below is a brief tutorial to show how vaultcoin works. Please note that following tutorial has been tested to work on Ubuntu. </p>
 	</div>
 </section>
 
@@ -52,76 +52,112 @@
 			<div class="container">
 				<h3 class="section-title">Tutorial</h3>
 				<div class="section-title-border"></div>
-<h4>Setup</h4>
-Start your terminal <br>
-Start the reversecoin daemon using the command "reversecoind" <br>
-Start the reversecoinminer in another tab using the command "reversecoin-miner" <br> <br>
 
-<h4>General commands</h4>
-<h5>Display general information</h5>
-$ rwallet info <br>
-Output of info <br> <br>
+<h3>Installation</h3>
+<ul>
+	<li>Installation instructions</li>
+</ul>
 
-<h5>Display account information</h5>
-$ rwallet account <br>
-Output of account <br> <br>
+<h3>Start Reversecoin</h3>
+<ul>
+  <li>Start the reversecoin daemon using the command "reversecoind"</li>
+  <li>Start the reversecoinminer in another tab using the command "reversecoin-miner"</li>
+</ul>
 
-<h5>Display balance</h5>
-$ rwallet balance <br>
-Output of balance <br> <br>
+<h3>General commands</h3>
 
-<h5>Display vault information</h5>
-$ rwallet getvaults <br>
-Output of getvaults <br> <br>
+<h4>Display general information</h4>
+<ul>
+	<li>$ rwallet info</li>
+	<li>Output of info</li>
+</ul>
 
-<h5>Displays transactions received by an address</h5>
-$ rwallet received <br>
-Output of received <br> <br>
+<h4>Display account information</h4>
+<ul>
+	<li>$ rwallet account</li>
+	<li>Output of account</li>
+</ul>
 
-<h5>Create a new address</h5>
-$ rwallet newaddress <br>
-Output of newaddress <br> <br>
+<h4>Display balance</h4>
+<ul>
+	<li>$ rwallet balance</li>
+	<li>Output of balance</li>
+</ul>
 
-<h4>Send and receive coins using normal accounts</h4>
+<h4>Display vault information</h4>
+<ul>
+	<li>$ rwallet getvaults</li>
+	<li>Output of getvaults</li>
+</ul>
 
-<h5>Send coins to an address</h5>
-$ rwallet newaddress <br>
-Copy the address <br>
+<h4>Displays transactions received by an address</h4>
+<ul>
+	<li>$ rwallet received </li>
+	<li>Output of received </li>
+</ul>
+
+<h4>Create a new address</h4>
+<ul>
+	<li>$ rwallet newaddress</li>
+	<li>Output of newaddress</li>
+</ul>
+
+<h3>Send and receive coins using normal accounts</h3>
+
+<h4>Send coins to an address</h4>
+<ul>
+	<li>$ rwallet newaddress</li>
+	<li>Copy the address</li>
+</ul>
+
 $ rwallet send newaddress <br>
 Output of received <br>
 Wait for a minute or two for the confirmation <br>
 $ rwallet balance <br>
 Output of balance <br> <br>
 
-<h4>Send and receive coins using vault accounts</h4>
-<h5>First, deposit some amount into a vault </h5>
+<h3>Send and receive coins using vault accounts</h3>
+
+<h4>First, deposit some amount into a vault </h4>
+<ul>
+	<li></li>
+	<li></li>
+</ul>
 $ rwallet vault_send amount <br>
 Output of received
 
-<h5>Check the balance of vault accounts</h5>
+<h4>Check the balance of vault accounts</h4>
+<ul>
+	<li></li>
+	<li></li>
+</ul>
 $ rwallet getvaults <br>
 Output of received <br> <br>
 
 $ rwallet savings <br>
 Output of received <br> <br>
 
-<h5>For normal withdraw using online keys only</h5>
+<h4>For normal withdraw using online keys only</h4>
+<ul>
+	<li></li>
+	<li></li>
+</ul>
 $ rwallet vault_withdraw <br>
 Output of received <br> <br>
 
 $ rwallet vault_pending.py
 Output of received <br> <br>
 
-<h5>Get Account <h5>
+<h4>Get Account <h4>
 Wait for pending transactions
 If you want the transactions to go through, just wait for the confirmation period
 Else,
 
-<h5>For overriding the transactions from vault</h5>
+<h4>For overriding the transactions from vault</h4>
 $ rwallet vault_override <br>
 Output of received <br> <br>
 
-<h5> If you want to transfer coins from your vault account fastly </h5>
+<h4> If you want to transfer coins from your vault account fastly </h4>
 $ rwallet vault_fast_override <br>
 Output of received <br> <br>
 
