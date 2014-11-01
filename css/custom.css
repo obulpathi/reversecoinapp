@@ -1,8 +1,13 @@
 .codetext {font-size: 16pt; color: #F0FFFF; font-family: sans-serif}
 .codetextb {font-size: 16pt; color: #0F0000; font-family: sans-serif}
+.codetextsmallb {font-size: 16pt; color: #0F0000;}
 .codecmd {font-size: 25pt; color: #F0FFFF; font-family: courier}
 .codecmdb {font-size: 25pt; color: #0F0000; font-family: courier}
 .codecmdmedium {font-size: 20pt; color: #F0FFFF; font-family: courier}
 .codecmdmediumb {font-size: 20pt; color: #0F0000; font-family: courier}
 .codecmdsmall {font-size: 16pt; color: #F0FFFF; font-family: courier}
 .codecmdsmallb {font-size: 16pt; color: #0F0000; font-family: courier}
+
+.tutorialtext {font-size: 15pt;}
+.tutorialcmd {font-size: 16pt; color: #0F0000; font-family: courier}
+.tutorialoutput {font-size: 12pt;}

@@ -10,6 +10,7 @@
 		<link href="css/vendor/timeline.css" rel="stylesheet" media="screen">
 		<link href="css/timecircles.css" rel="stylesheet">
 		<link href="css/turquoise.css" rel="stylesheet" media="screen">
+		<link href="css/custom.css" rel="stylesheet" media="screen">
 		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 		<!--[if lt IE 9]>
 			<script src="js/vendor/html5shiv.js"></script>
@@ -53,113 +54,94 @@
 				<h3 class="section-title">Tutorial</h3>
 				<div class="section-title-border"></div>
 
+
 <h3>Installation</h3>
-<ul>
-	<li>Installation instructions</li>
-</ul>
+<span class="tutorialcmd">&nbsp;&#36;&nbsp;pip install reversecoin</span>
+
+
+<h3>Configuration</h3>
+<span class="tutorialcmd">&nbsp;&#36;&nbsp;vim ~/.bitocoinpy.cfg</span>
+
 
 <h3>Start Reversecoin</h3>
-<ul>
-  <li>Start the reversecoin daemon using the command "reversecoind"</li>
-  <li>Start the reversecoinminer in another tab using the command "reversecoin-miner"</li>
+	<ul>
+		<li>
+			<span class="tutorialtext">Start the reversecoin daemon: </span>
+			<span class="tutorialcmd">&nbsp;&#36;&nbsp;reversecoind</span>
+		</li>
+		<li>
+			<span class="tutorialtext">Start the reversecoin miner: </span>
+			<span class="codecmdsmallb">&nbsp;&#36;&nbsp;reversecoin-miner</span>
+		</li>
 </ul>
+
 
 <h3>General commands</h3>
 
-<h4>Display general information</h4>
-<ul>
-	<li>$ rwallet info</li>
-	<li>Output of info</li>
-</ul>
+<span class="tutorialtext">Display general information</span> <br>
+<span class="tutorialcmd">&nbsp;&#36;&nbsp;rwallet info</span> <br>
+<span class="tutorialoutput">Output of info</span> <br> <br>
 
-<h4>Display account information</h4>
-<ul>
-	<li>$ rwallet account</li>
-	<li>Output of account</li>
-</ul>
+<span class="tutorialtext">Display account information</span> <br>
+<span class="tutorialcmd">&nbsp;&#36;&nbsp;rwallet account</span> <br>
+<span class="tutorialoutput">Output of info</span> <br> <br>
 
-<h4>Display balance</h4>
-<ul>
-	<li>$ rwallet balance</li>
-	<li>Output of balance</li>
-</ul>
+<span class="tutorialtext">Display balance</span> <br>
+<span class="tutorialcmd">&nbsp;&#36;&nbsp;rwallet balance</span> <br>
+<span class="tutorialoutput">Output of balance</span> <br> <br>
 
-<h4>Display vault information</h4>
-<ul>
-	<li>$ rwallet getvaults</li>
-	<li>Output of getvaults</li>
-</ul>
+<span class="tutorialtext">Display vault information</span> <br>
+<span class="tutorialcmd">&nbsp;&#36;&nbsp;rwallet getvaults</span> <br>
+<span class="tutorialoutput">Output of getvaults</span> <br> <br>
 
-<h4>Displays transactions received by an address</h4>
-<ul>
-	<li>$ rwallet received </li>
-	<li>Output of received </li>
-</ul>
+<span class="tutorialtext">Displays transactions received by an address</span> <br>
+<span class="tutorialcmd">&nbsp;&#36;&nbsp;rwallet received</span> <br>
+<span class="tutorialoutput">Output of received</span> <br> <br>
 
-<h4>Create a new address</h4>
-<ul>
-	<li>$ rwallet newaddress</li>
-	<li>Output of newaddress</li>
-</ul>
 
 <h3>Send and receive coins using normal accounts</h3>
 
-<h4>Send coins to an address</h4>
-<ul>
-	<li>$ rwallet newaddress</li>
-	<li>Copy the address</li>
-</ul>
+<span class="tutorialtext">Create a new address</span> <br>
+<span class="tutorialcmd">&nbsp;&#36;&nbsp;rwallet newaddress</span> <br>
+<span class="tutorialoutput">Output of newaddress</span> <br> <br>
+<span class="tutorialtext">Copy the address</span> <br>
 
-$ rwallet send newaddress <br>
-Output of received <br>
-Wait for a minute or two for the confirmation <br>
-$ rwallet balance <br>
-Output of balance <br> <br>
+<span class="tutorialtext">Send coins to an address</span> <br>
+<span class="tutorialcmd">&nbsp;&#36;&nbsp;rwallet send newaddress</span> <br>
+<span class="tutorialoutput">Output</span> <br> <br>
+<span class="tutorialtext">Wait for a minute for the confirmation</span> <br>
+<span class="tutorialtext">Check for updated balances</span> <br>
+<span class="tutorialcmd">&nbsp;&#36;&nbsp;rwallet balance</span> <br>
+<span class="tutorialoutput">Output of balance</span> <br>
 
 <h3>Send and receive coins using vault accounts</h3>
 
-<h4>First, deposit some amount into a vault </h4>
-<ul>
-	<li></li>
-	<li></li>
-</ul>
-$ rwallet vault_send amount <br>
-Output of received
+<span class="tutorialtext">First, deposit some amount into a vault</span> <br>
+<span class="tutorialcmd">&nbsp;&#36;&nbsp;rwallet vault_send amount</span> <br>
+<span class="tutorialoutput">Output of newaddress</span> <br> <br>
+<span class="tutorialtext">Wait for a minute for the confirmation</span> <br> <br>
+<span class="tutorialtext">Check the balance of vault accounts</span> <br>
+<span class="tutorialcmd">&nbsp;&#36;&nbsp;rwallet getvaults</span> <br>
+<span class="tutorialoutput">Output of newaddress</span> <br> <br>
+<span class="tutorialcmd">&nbsp;&#36;&nbsp;rwallet savings</span> <br>
+<span class="tutorialoutput">Output of newaddress</span> <br> <br>
 
-<h4>Check the balance of vault accounts</h4>
-<ul>
-	<li></li>
-	<li></li>
-</ul>
-$ rwallet getvaults <br>
-Output of received <br> <br>
+<span class="tutorialtext">Withdraw coins from vault using online keys only</span> <br>
+<span class="tutorialcmd">&nbsp;&#36;&nbsp;rwallet vault_withdraw</span> <br>
+<span class="tutorialoutput">Output of received</span> <br> <br>
+<span class="tutorialtext">Withdraw coins from vault using online keys only</span> <br>
+<span class="tutorialcmd">&nbsp;&#36;&nbsp;rwallet vault_pending</span> <br>
+<span class="tutorialoutput">Output of received</span> <br> <br>
 
-$ rwallet savings <br>
-Output of received <br> <br>
+<span class="tutorialtext">Wait for pending transactions If you want the transactions to go through, just wait for the confirmation period.</span> <br> <br>
 
-<h4>For normal withdraw using online keys only</h4>
-<ul>
-	<li></li>
-	<li></li>
-</ul>
-$ rwallet vault_withdraw <br>
-Output of received <br> <br>
+<span class="tutorialtext">For overriding the transactions from vault</span> <br>
+<span class="tutorialcmd">&nbsp;&#36;&nbsp;rwallet vault_override</span> <br>
+<span class="tutorialoutput">Output of received</span> <br> <br>
 
-$ rwallet vault_pending.py
-Output of received <br> <br>
-
-<h4>Get Account <h4>
-Wait for pending transactions
-If you want the transactions to go through, just wait for the confirmation period
-Else,
-
-<h4>For overriding the transactions from vault</h4>
-$ rwallet vault_override <br>
-Output of received <br> <br>
-
-<h4> If you want to transfer coins from your vault account fastly </h4>
-$ rwallet vault_fast_override <br>
-Output of received <br> <br>
+<span class="tutorialtext">If you want to transfer coins from your vault account fastly</span> <br>
+<span class="tutorialcmd">&nbsp;&#36;&nbsp;rwallet vault_fast_override</span> <br>
+<span class="tutorialoutput">Output of received</span> <br> <br>
 
 			</div>
 		</section>
