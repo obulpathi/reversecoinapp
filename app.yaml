@@ -17,6 +17,10 @@ handlers:
   static_files: howitworks.html
   upload: howitworks.html
 
+- url: /favicon.ico
+  static_files: images/favicon.ico
+  upload: images/favicon.ico
+
 - url: /css
   static_dir: css
 
