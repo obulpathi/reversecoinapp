@@ -60,8 +60,8 @@
 
 
 <h3>Configuration</h3>
-<span class="tutorialcmd">&nbsp;&#36;&nbsp;vim ~/.bitocoinpy.cfg</span>
-
+<span class="tutorialcmd">&nbsp;&#36;&nbsp;vim ~/.reversecoin.cfg</span> <br>
+<span class="tutorialcmd">&nbsp;&#36;&nbsp;vim ~/.reversecoinminer.cfg</span>
 
 <h3>Start Reversecoin</h3>
 	<ul>
@@ -80,68 +80,149 @@
 
 <span class="tutorialtext">Display general information</span> <br>
 <span class="tutorialcmd">&nbsp;&#36;&nbsp;rwallet info</span> <br>
-<span class="tutorialoutput">Output of info</span> <br> <br>
+<span class="tutorialoutput">Blocks: 14</span> <br> <br>
 
 <span class="tutorialtext">Display account information</span> <br>
 <span class="tutorialcmd">&nbsp;&#36;&nbsp;rwallet account</span> <br>
-<span class="tutorialoutput">Output of info</span> <br> <br>
+<span class="tutorialoutput">Address:  1Fs3w4ocFYQfWHwwW1BmCt64Lzxhy949x8</span> <br>
+<span class="tutorialoutput">Public key:  041710ff89c02 ... </span> <br>
+<span class="tutorialoutput">Private key:  3082011302010 ...</span> <br>
+<span class="tutorialoutput">Balance:  4999999974.0</span> <br> <br>
+
 
 <span class="tutorialtext">Display balance</span> <br>
 <span class="tutorialcmd">&nbsp;&#36;&nbsp;rwallet balance</span> <br>
-<span class="tutorialoutput">Output of balance</span> <br> <br>
+<span class="tutorialoutput">Accounts</span> <br>
+<span class="tutorialoutput">1Fs3w4ocFYQfWHwwW1BmCt64Lzxhy949x8:  4999999974.0</span> <br>
+<span class="tutorialoutput">...</span> <br>
+<span class="tutorialoutput">Vaults</span> <br>
+<span class="tutorialoutput">4Tbmx8e3BahLYzaXiaMSsjvizeqDnR9za6:  20.0</span> <br>
+<span class="tutorialoutput">...</span> <br>
+<span class="tutorialoutput">Pending Transfers</span> <br>
+<span class="tutorialoutput">4XiBhK9VrHkq2jsefHf7eFCtm4cMVJjCe9 -> 1ey11o2pUBXrQkDAAjYrrWfYuSRry9Y1q:  3</span> <br>
+<span class="tutorialoutput">4XiBhK9VrHkq2jsefHf7eFCtm4cMVJjCe9 -> 4XiBhK9VrHkq2jsefHf7eFCtm4cMVJjCe9:  26</span> <br> <br>
+
 
 <span class="tutorialtext">Display vault information</span> <br>
 <span class="tutorialcmd">&nbsp;&#36;&nbsp;rwallet getvaults</span> <br>
-<span class="tutorialoutput">Output of getvaults</span> <br> <br>
+<span class="tutorialoutput">
+Vault Address: 4Tbmx8e3BahLYzaXiaMSsjvizeqDnR9za6 <br>
+<p style="margin-left:3em">
+Balance:  20.0 <br>
+Address: 1PYWiQ74D3w8RVqpGWnn8meW28qw8nP6TB <br>
+Master Address: 1ALgwjntbAcdRAme6VPbFqS8MzG1ZJ6uqZ <br>
+timeout: 20 <br>
+Received transactions: <br>
+&nbsp;&nbsp;&nbsp;&nbsp;txhash: 101665031129512595632034975620446461683325893395875716668787892682559998792598 n: 1 value: 20
+	</p>
+</span> <br>
 
-<span class="tutorialtext">Displays transactions received by an address</span> <br>
+
+<span class="tutorialtext">Display transactions received by an address</span> <br>
 <span class="tutorialcmd">&nbsp;&#36;&nbsp;rwallet received</span> <br>
-<span class="tutorialoutput">Output of received</span> <br> <br>
-
+<span class="tutorialoutput">Output: <br>
+<p style="margin-left:3em">
+0
+	txhash:  10691492176647269364076330028884865379659626147637972543004927716254311523981
+	n:  0
+	value:  5000000000
+</p>
+</span>
 
 <h3>Send and receive coins using normal accounts</h3>
 
 <span class="tutorialtext">Create a new address</span> <br>
 <span class="tutorialcmd">&nbsp;&#36;&nbsp;rwallet newaddress</span> <br>
-<span class="tutorialoutput">Output of newaddress</span> <br> <br>
-<span class="tutorialtext">Copy the address</span> <br>
+<span class="tutorialoutput">Output: <br>
+1B3gjZwmcT1gnRjM5Vsq3ejQrn5SxTWwMn</span> <br> <br>
 
 <span class="tutorialtext">Send coins to an address</span> <br>
-<span class="tutorialcmd">&nbsp;&#36;&nbsp;rwallet send newaddress</span> <br>
-<span class="tutorialoutput">Output</span> <br> <br>
+<span class="tutorialcmd">&nbsp;&#36;&nbsp;rwallet send</span> <br>
+<span class="tutorialoutput">Output: <br>
+Enter the address to send coins to: 16BWWhnwdRzEMHDegCcFSAmfXTpsjqQgEm <br>
+Enter the balance to transfer to address: 5 <br>
+Transferring:  5  	to:  16BWWhnwdRzEMHDegCcFSAmfXTpsjqQgEm
+</span> <br> <br>
+
 <span class="tutorialtext">Wait for a minute for the confirmation</span> <br>
 <span class="tutorialtext">Check for updated balances</span> <br>
 <span class="tutorialcmd">&nbsp;&#36;&nbsp;rwallet balance</span> <br>
-<span class="tutorialoutput">Output of balance</span> <br>
 
 <h3>Send and receive coins using vault accounts</h3>
 
-<span class="tutorialtext">First, deposit some amount into a vault</span> <br>
-<span class="tutorialcmd">&nbsp;&#36;&nbsp;rwallet vault_send amount</span> <br>
-<span class="tutorialoutput">Output of newaddress</span> <br> <br>
+<span class="tutorialtext">First, lets create a vault</span> <br>
+<span class="tutorialcmd">&nbsp;&#36;&nbsp;rwallet vault_new</span> <br>
+<span class="tutorialoutput">Output: <br>
+Creating new vault: address: 1HFDd3UBNjxUm7C1zkKxVC5bKvDFCN1JUc master_address: 1GqLygiFjnVLZ3FrmMuQrYvVgpNJTgbnMy <br>
+Created: 4DmsKRg83o5twQxTQx7ZZSFYcsrpTHS92t
+</span> <br> <br>
+
+<span class="tutorialtext">Now, lets deposit some amount into a vault</span> <br>
+<span class="tutorialcmd">&nbsp;&#36;&nbsp;rwallet vault_send</span> <br>
+<span class="tutorialoutput">Output: <br>
+	0 : 4DmsKRg83o5twQxTQx7ZZSFYcsrpTHS92t  0.0 <br>
+	Select the vault to transfer money to: 0 <br>
+	Enter the balance to transfer to vault: 42 <br>
+	Transfering 42 to vault 4DmsKRg83o5twQxTQx7ZZSFYcsrpTHS92t <br>
+</span> <br> <br>
 <span class="tutorialtext">Wait for a minute for the confirmation</span> <br> <br>
+
 <span class="tutorialtext">Check the balance of vault accounts</span> <br>
-<span class="tutorialcmd">&nbsp;&#36;&nbsp;rwallet getvaults</span> <br>
-<span class="tutorialoutput">Output of newaddress</span> <br> <br>
 <span class="tutorialcmd">&nbsp;&#36;&nbsp;rwallet savings</span> <br>
-<span class="tutorialoutput">Output of newaddress</span> <br> <br>
+<span class="tutorialoutput">Output: <br>
+4XiBhK9VrHkq2jsefHf7eFCtm4cMVJjCe9:  31.0 <br>
+4Tbmx8e3BahLYzaXiaMSsjvizeqDnR9za6:  20.0 <br>
+</span> <br> <br>
+
 
 <span class="tutorialtext">Withdraw coins from vault using online keys only</span> <br>
 <span class="tutorialcmd">&nbsp;&#36;&nbsp;rwallet vault_withdraw</span> <br>
-<span class="tutorialoutput">Output of received</span> <br> <br>
-<span class="tutorialtext">Withdraw coins from vault using online keys only</span> <br>
+<span class="tutorialoutput">Output: <br>
+Available vaults <br>
+Id:  0 4XiBhK9VrHkq2jsefHf7eFCtm4cMVJjCe9:  31.0 <br>
+Id:  1 4Tbmx8e3BahLYzaXiaMSsjvizeqDnR9za6:  20.0 <br>
+Enter the id of the vault you want to transfer balance from: 0 <br>
+Enter the balance to transfer from: 4XiBhK9VrHkq2jsefHf7eFCtm4cMVJjCe9: 3 <br>
+Transfering: 3	from address: 4XiBhK9VrHkq2jsefHf7eFCtm4cMVJjCe9	to address: 1ey11o2pUBXrQkDAAjYrrWfYuSRry9Y1q <br>
+
+
 <span class="tutorialcmd">&nbsp;&#36;&nbsp;rwallet vault_pending</span> <br>
-<span class="tutorialoutput">Output of received</span> <br> <br>
+<span class="tutorialoutput">Output: <br>
+Pending Transfers
+	Id:  1
+		Input: 4XiBhK9VrHkq2jsefHf7eFCtm4cMVJjCe9
+		Outputs:
+			3 -> 1ey11o2pUBXrQkDAAjYrrWfYuSRry9Y1q
+			26 -> 4XiBhK9VrHkq2jsefHf7eFCtm4cMVJjCe9
+</span> <br> <br>
 
 <span class="tutorialtext">Wait for pending transactions If you want the transactions to go through, just wait for the confirmation period.</span> <br> <br>
 
 <span class="tutorialtext">For overriding the transactions from vault</span> <br>
 <span class="tutorialcmd">&nbsp;&#36;&nbsp;rwallet vault_override</span> <br>
-<span class="tutorialoutput">Output of received</span> <br> <br>
+<span class="tutorialoutput">Output: <br>
+Pending Transfers <br>
+	Id:  1 <br>
+		Input: 4XiBhK9VrHkq2jsefHf7eFCtm4cMVJjCe9 <br>
+		Outputs: <br>
+			3 -> 1ey11o2pUBXrQkDAAjYrrWfYuSRry9Y1q <br>
+			26 -> 4XiBhK9VrHkq2jsefHf7eFCtm4cMVJjCe9 <br>
+Enter the id of the vault transaction you want to override: 1 <br>
+Fromaddress:  4XiBhK9VrHkq2jsefHf7eFCtm4cMVJjCe9 <br>
+Toaddress:  1LC6AfZZnM7MmECb185MN71rT47bSrUdkS <br>
+Overriding the transaction
+</span> <br> <br>
 
 <span class="tutorialtext">If you want to transfer coins from your vault account fastly</span> <br>
 <span class="tutorialcmd">&nbsp;&#36;&nbsp;rwallet vault_fast_override</span> <br>
-<span class="tutorialoutput">Output of received</span> <br> <br>
+<span class="tutorialoutput">Output: <br>
+Available vaults <br>
+Id:  0 4XiBhK9VrHkq2jsefHf7eFCtm4cMVJjCe9:  0.0 <br>
+Id:  1 4Tbmx8e3BahLYzaXiaMSsjvizeqDnR9za6:  20.0 <br>
+Enter the id of the vault you want to transfer balance from: 1 <br>
+Enter the balance to transfer from: 4Tbmx8e3BahLYzaXiaMSsjvizeqDnR9za6: 3 <br>
+Transfering: 3	from address: 4Tbmx8e3BahLYzaXiaMSsjvizeqDnR9za6	to address: 1A6LTRqzXt1MEox92ob3UvaQtoY35FbaQJ
+</span> <br> <br>
 
 			</div>
 		</section>
