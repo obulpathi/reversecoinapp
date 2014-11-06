@@ -55,13 +55,14 @@
 				<div class="section-title-border"></div>
 
 
-<h3>Installation</h3>
-<span class="tutorialcmd">&nbsp;&#36;&nbsp;pip install reversecoin</span>
+<h3>Installation on Ubuntu</h3>
+<span class="tutorialcmd">&nbsp;&#36;&nbsp;sudo apt-get install python-dev</span> <br>
+<span class="tutorialcmd">&nbsp;&#36;&nbsp;(sudo) pip install reversecoin</span>
 
 
 <h3>Configuration</h3>
 <span class="tutorialcmd">&nbsp;&#36;&nbsp;vim ~/.reversecoin.cfg</span> <br>
-<span class="tutorialcmd">&nbsp;&#36;&nbsp;vim ~/.reversecoinminer.cfg</span>
+<span class="tutorialcmd">&nbsp;&#36;&nbsp;vim ~/.reversecoin-miner.cfg</span>
 
 <h3>Start Reversecoin</h3>
 	<ul>
@@ -87,7 +88,6 @@ Blocks: 14
 <span class="tutorialtext">Display account information</span> <br>
 <span class="tutorialcmd">&nbsp;&#36;&nbsp;rwallet account</span>
 <pre class="tutorialoutput">
-Blocks: 14
 Address:  1Fs3w4ocFYQfWHwwW1BmCt64Lzxhy949x8
 Public key:  041710ff89c02 ...
 Private key:  3082011302010 ...
@@ -223,7 +223,7 @@ Overriding the transaction
 </pre>
 
 <span class="tutorialtext">If you want to transfer coins from your vault account fastly</span> <br>
-<span class="tutorialcmd">&nbsp;&#36;&nbsp;rwallet vault_fast_override</span>
+<span class="tutorialcmd">&nbsp;&#36;&nbsp;rwallet vault_fast_withdraw</span>
 <pre class="tutorialoutput">
 Available vaults
 Id: 0 4XiBhK9VrHkq2jsefHf7eFCtm4cMVJjCe9: 0.0
