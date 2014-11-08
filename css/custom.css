@@ -1,3 +1,6 @@
+.textpara {font-size: 12pt;}
+.textparasmall {font-size: 11pt; color:black;}
+
 .codetext {font-size: 16pt; color: #F0FFFF; font-family: sans-serif}
 .codetextb {font-size: 16pt; color: #0F0000; font-family: sans-serif}
 .codetextsmallb {font-size: 16pt; color: #0F0000;}
