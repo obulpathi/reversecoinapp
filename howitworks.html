@@ -54,7 +54,7 @@
 
 
 <h3>Installation on Ubuntu</h3>
-<span class="tutorialcmd">&nbsp;&#36;&nbsp;sudo apt-get install python-dev</span> <br>
+<span class="tutorialcmd">&nbsp;&#36;&nbsp;sudo apt-get install python-pip python-dev</span> <br>
 <span class="tutorialcmd">&nbsp;&#36;&nbsp;(sudo) pip install reversecoin</span>
 
 
@@ -97,40 +97,32 @@ Balance:  4999999974.0
 <span class="tutorialcmd">&nbsp;&#36;&nbsp;rwallet balance</span>
 <pre class="tutorialoutput">
 Accounts
-1Fs3w4ocFYQfWHwwW1BmCt64Lzxhy949x8:  4999999974.0
+1Fs3w4ocFYQfWHwwW1BmCt64Lzxhy949x8:  5000000000.0
 16BWWhnwdRzEMHDegCcFSAmfXTpsjqQgEm:  5000000000.0
  ...
 
 Vaults
-4XiBhK9VrHkq2jsefHf7eFCtm4cMVJjCe9:  0.0
-4Tbmx8e3BahLYzaXiaMSsjvizeqDnR9za6:  20.0
+	No vaults created yet!
 
 Pending Transfers
-4XiBhK9VrHkq2jsefHf7eFCtm4cMVJjCe9 -> 1ey11o2pUBXrQkDAAjYrrWfYuSRry9Y1q:  3
-4XiBhK9VrHkq2jsefHf7eFCtm4cMVJjCe9 -> 4XiBhK9VrHkq2jsefHf7eFCtm4cMVJjCe9:  26
-</pre>
+	No pending transactions!
 
-
-<span class="tutorialtext">Display vault information</span> <br>
-<span class="tutorialcmd">&nbsp;&#36;&nbsp;rwallet getvaults</span>
-<pre class="tutorialoutput">
-Vault Address: 4Tbmx8e3BahLYzaXiaMSsjvizeqDnR9za6
-    Balance:  20.0
-    Address: 1PYWiQ74D3w8RVqpGWnn8meW28qw8nP6TB
-    Master Address: 1ALgwjntbAcdRAme6VPbFqS8MzG1ZJ6uqZ
-    timeout: 20
-    Received transactions:
-        txhash: 101665031129512595632034975620446461683325893395875716668787892682559998792598 n: 1 value: 20
 </pre>
 
 
 <span class="tutorialtext">Display transactions received by an address</span> <br>
 <span class="tutorialcmd">&nbsp;&#36;&nbsp;rwallet received</span> <br>
 <pre class="tutorialoutput">
-0
-    txhash:  10691492176647269364076330028884865379659626147637972543004927716254311523981
-    n: 0
-    value: 5000000000
+Id: 1	16vG4kpi4Kwj7rCvcQRmndkASuhpiUkefb
+Id: 2	16tVroAQYhkHxAEXKu2WUmUAKZdpoLnNTD
+Id: 3	1CfzTkpb13AEjnaiNU7GRZoFPEPP6m4DML
+Enter the id of the address to check received transactions: 1
+16vG4kpi4Kwj7rCvcQRmndkASuhpiUkefb received 1 transaction(s)
+Transaction 1
+	txhash: 86984500261139323876473882090714817035950406287964486706826054079903609861629
+	n: 0
+	value: 5000000000
+
 </pre>
 
 <h3>Send and receive coins using normal accounts</h3>
@@ -144,13 +136,30 @@ Vault Address: 4Tbmx8e3BahLYzaXiaMSsjvizeqDnR9za6
 <span class="tutorialtext">Send coins to an address</span> <br>
 <span class="tutorialcmd">&nbsp;&#36;&nbsp;rwallet send</span>
 <pre class="tutorialoutput">
-Enter the address to send coins to: 16BWWhnwdRzEMHDegCcFSAmfXTpsjqQgEm
-Enter the balance to transfer to address: 5
-Transferring: 5	to: 16BWWhnwdRzEMHDegCcFSAmfXTpsjqQgEm
+Id: 1	16vG4kpi4Kwj7rCvcQRmndkASuhpiUkefb
+Id: 2	1Nhq1uuA7wUtc28Jff1v3mtVhguYjnMHoK
+Id: 3	1HQsyNzq7bBuVsHZ6P7iPaegRdijHAMHpC
+Id: 4	1B3gjZwmcT1gnRjM5Vsq3ejQrn5SxTWwMn
+Enter the id of the address to send coins to: 4
+Enter the balance to transfer to address: 34
+Transferring: 34 to: 1B3gjZwmcT1gnRjM5Vsq3ejQrn5SxTWwMn
 </pre>
 
 <span class="tutorialtext">Wait for a minute for the confirmation and check for updated balance</span> <br>
 <span class="tutorialcmd">&nbsp;&#36;&nbsp;rwallet balance</span> <br>
+<pre class="tutorialoutput">
+Accounts
+1Fs3w4ocFYQfWHwwW1BmCt64Lzxhy949x8:  5000000000.0
+16BWWhnwdRzEMHDegCcFSAmfXTpsjqQgEm:  5000000000.0
+1B3gjZwmcT1gnRjM5Vsq3ejQrn5SxTWwMn:  34.0
+...
+
+Vaults
+	No vaults created yet!
+
+Pending Transfers
+	No pending transactions!
+</pre>
 
 <h3>Send and receive coins using vault accounts</h3>
 
@@ -166,19 +175,34 @@ Vault Address: 4DmsKRg83o5twQxTQx7ZZSFYcsrpTHS92t
 <span class="tutorialtext">Now, lets deposit some amount into a vault</span> <br>
 <span class="tutorialcmd">&nbsp;&#36;&nbsp;rwallet vault_send</span> <br>
 <pre class="tutorialoutput">
-0 : 4DmsKRg83o5twQxTQx7ZZSFYcsrpTHS92t  0.0
-Select the vault to transfer money to: 0
+1: 4HYNqEahenrvDLUCVevLm7v1HmV7f2tECB
+2: 4PAisa72N4hFTPzXYcXFnarfQSNVndGF13
+Please enter the index of the vault to transfer money to: 1
 Enter the balance to transfer to vault: 42
-Transfering 42 to vault 4DmsKRg83o5twQxTQx7ZZSFYcsrpTHS92t
+Transfering 42 to vault 4HYNqEahenrvDLUCVevLm7v1HmV7f2tECB
 </pre>
 
 <span class="tutorialtext">Wait for a minute for the confirmation</span> <br> <br>
 
 <span class="tutorialtext">Check the balance of vault accounts</span> <br>
-<span class="tutorialcmd">&nbsp;&#36;&nbsp;rwallet savings</span>
+<span class="tutorialcmd">&nbsp;&#36;&nbsp;rwallet vault_balance</span>
 <pre class="tutorialoutput">
-4XiBhK9VrHkq2jsefHf7eFCtm4cMVJjCe9:  31.0
-4Tbmx8e3BahLYzaXiaMSsjvizeqDnR9za6:  20.0
+4HYNqEahenrvDLUCVevLm7v1HmV7f2tECB: 42.0
+4PAisa72N4hFTPzXYcXFnarfQSNVndGF13: 0.0
+</pre>
+
+
+<span class="tutorialtext">Display detailed vault information</span> <br>
+<span class="tutorialcmd">&nbsp;&#36;&nbsp;rwallet vault_info</span>
+<pre class="tutorialoutput">
+Vaults
+Vault Address: 4HYNqEahenrvDLUCVevLm7v1HmV7f2tECB
+	Balance: 42.0
+	Address: 15MkohW6NsPi9tcuauxFuvkqoD3GJGdA1e
+	Master Address: 18iZCwDajHjrpAirtRho7yG4YnZbuT4yvh
+	timeout: 20
+	Received transactions:
+		txhash: 96514527025978237138015757123231276653576463689488169168267055758937615537735	n: 0	value: 42
 </pre>
 
 
@@ -186,21 +210,26 @@ Transfering 42 to vault 4DmsKRg83o5twQxTQx7ZZSFYcsrpTHS92t
 <span class="tutorialcmd">&nbsp;&#36;&nbsp;rwallet vault_withdraw</span>
 <pre class="tutorialoutput">
 Available vaults
-Id:  0 4XiBhK9VrHkq2jsefHf7eFCtm4cMVJjCe9:  31.0
-Id:  1 4Tbmx8e3BahLYzaXiaMSsjvizeqDnR9za6:  20.0
-Enter the id of the vault you want to transfer balance from: 0
-Enter the balance to transfer from: 4XiBhK9VrHkq2jsefHf7eFCtm4cMVJjCe9: 3
-Transfering: 3 from address: 4XiBhK9VrHkq2jsefHf7eFCtm4cMVJjCe9 to address: 1ey11o2pUBXrQkDAAjYrrWfYuSRry9Y1q
+Id: 1, Address: 4HYNqEahenrvDLUCVevLm7v1HmV7f2tECB, Balance: 42.0
+Enter the id of the vault you want to transfer coins from: 1
+
+Id: 1	1GA2CMyFM8LsGfKV3JxHcUBmLocWJ9irNv
+Id: 2	15CXyWwfpdQWWDJLAR9iRE2i4HqmGvUeHt
+Id: 3	1JAZpSBHLhzxTbLgknNsHdgm7dX5qMeLvp
+Id: 4	16tVroAQYhkHxAEXKu2WUmUAKZdpoLnNTD
+Enter the id of the address to send coins to: 1
+Enter the balance to transfer from 4H7RkmGw9xmTWHRkpsX2R3BMvXDGk8q9rv to 1GA2CMyFM8LsGfKV3JxHcUBmLocWJ9irNv: 3
+Transfering 3	from 4H7RkmGw9xmTWHRkpsX2R3BMvXDGk8q9rv	to 1GA2CMyFM8LsGfKV3JxHcUBmLocWJ9irNv
 </pre>
 
 <span class="tutorialcmd">&nbsp;&#36;&nbsp;rwallet vault_pending</span>
 <pre class="tutorialoutput">
 Pending Transfers
-    Id:  1
-        Input: 4XiBhK9VrHkq2jsefHf7eFCtm4cMVJjCe9
-        Outputs:
-            3 -> 1ey11o2pUBXrQkDAAjYrrWfYuSRry9Y1q
-            26 -> 4XiBhK9VrHkq2jsefHf7eFCtm4cMVJjCe9
+	Id:  1
+		Input: 4HYNqEahenrvDLUCVevLm7v1HmV7f2tECB
+		Outputs:
+			3 -> 1CrCnA1ToTin2MqBSKBY8rudUGxdC9qpj
+			37 -> 4HYNqEahenrvDLUCVevLm7v1HmV7f2tECB
 </pre>
 
 <span class="tutorialtext">Wait for pending transactions If you want the transactions to go through, just wait for the confirmation period.</span> <br> <br>
@@ -209,14 +238,14 @@ Pending Transfers
 <span class="tutorialcmd">&nbsp;&#36;&nbsp;rwallet vault_override</span> <br>
 <pre class="tutorialoutput">
 Pending Transfers
-    Id:  1
-        Input: 4XiBhK9VrHkq2jsefHf7eFCtm4cMVJjCe9
-        Outputs:
-            3 -> 1ey11o2pUBXrQkDAAjYrrWfYuSRry9Y1q
-            26 -> 4XiBhK9VrHkq2jsefHf7eFCtm4cMVJjCe9
+	Id:  1
+		Input: 4HYNqEahenrvDLUCVevLm7v1HmV7f2tECB
+		Outputs:
+			3 -> 1CrCnA1ToTin2MqBSKBY8rudUGxdC9qpj
+			37 -> 4HYNqEahenrvDLUCVevLm7v1HmV7f2tECB
 Enter the id of the vault transaction you want to override: 1
-Fromaddress:  4XiBhK9VrHkq2jsefHf7eFCtm4cMVJjCe9
-Toaddress:  1LC6AfZZnM7MmECb185MN71rT47bSrUdkS
+Fromaddress:  4HYNqEahenrvDLUCVevLm7v1HmV7f2tECB
+Toaddress:  1sEDAwVcH2e5mFvjmWxXY13UCJQPqLP85
 Overriding the transaction
 </pre>
 
@@ -224,11 +253,17 @@ Overriding the transaction
 <span class="tutorialcmd">&nbsp;&#36;&nbsp;rwallet vault_fast_withdraw</span>
 <pre class="tutorialoutput">
 Available vaults
-Id: 0 4XiBhK9VrHkq2jsefHf7eFCtm4cMVJjCe9: 0.0
-Id: 1 4Tbmx8e3BahLYzaXiaMSsjvizeqDnR9za6: 20.0
+Id:  1 4H7RkmGw9xmTWHRkpsX2R3BMvXDGk8q9rv:  42.0
 Enter the id of the vault you want to transfer balance from: 1
-Enter the balance to transfer from: 4Tbmx8e3BahLYzaXiaMSsjvizeqDnR9za6: 3
-Transfering: 3 from address: 4Tbmx8e3BahLYzaXiaMSsjvizeqDnR9za6 to address: 1A6LTRqzXt1MEox92ob3UvaQtoY35FbaQJ
+
+Id: 1	1GA2CMyFM8LsGfKV3JxHcUBmLocWJ9irNv
+Id: 2	15CXyWwfpdQWWDJLAR9iRE2i4HqmGvUeHt
+Id: 3	1JAZpSBHLhzxTbLgknNsHdgm7dX5qMeLvp
+Id: 4	16tVroAQYhkHxAEXKu2WUmUAKZdpoLnNTD
+Enter the id of the address to send coins to: 1
+Enter the balance to transfer from 4H7RkmGw9xmTWHRkpsX2R3BMvXDGk8q9rv to 1GA2CMyFM8LsGfKV3JxHcUBmLocWJ9irNv: 3
+Transfering 3 from address 4H7RkmGw9xmTWHRkpsX2R3BMvXDGk8q9rv to 1GA2CMyFM8LsGfKV3JxHcUBmLocWJ9irNv
+
 </pre>
 
 			</div>
@@ -264,14 +299,13 @@ Transfering: 3 from address: 4Tbmx8e3BahLYzaXiaMSsjvizeqDnR9za6 to address: 1A6L
 		<script src="js/vendor/holder.js"></script>
 		<script src="js/main.js"></script>
 		<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-56297167-1', 'auto');
-  ga('send', 'pageview');
-
-</script>
+			ga('create', 'UA-57381867-1', 'auto');
+			ga('send', 'pageview');
+		</script>
 	</body>
 </html>
