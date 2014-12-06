@@ -60,7 +60,10 @@
 
 <h3>Configuration</h3>
 <span class="tutorialcmd">&nbsp;&#36;&nbsp;vim ~/.reversecoin.cfg</span> <br>
-<span class="tutorialcmd">&nbsp;&#36;&nbsp;vim ~/.reversecoin-miner.cfg</span>
+<span class="tutorialcmd">&nbsp;&#36;&nbsp;vim ~/.reversecoin-miner.cfg</span> <br> <br>
+<span class="tutorialtext">If the configuration files are missing, you can copy them from
+	<a href=" https://github.com/obulpathi/reversecoin/tree/master/etc" target="_blank"><strong>config files.</strong></a> <br>
+Copy config.cfg to ~/.reversecoin.cfg and miner.cfg to ~/.reversecoin-miner.cfg. </span>
 
 <h3>Start Reversecoin</h3>
 	<ul>
@@ -182,7 +185,7 @@ Enter the balance to transfer to vault: 42
 Transfering 42 to vault 4HYNqEahenrvDLUCVevLm7v1HmV7f2tECB
 </pre>
 
-<span class="tutorialtext">Wait for a minute for the confirmation</span> <br> <br>
+<span class="tutorialtext">Wait a minute for the confirmation</span> <br> <br>
 
 <span class="tutorialtext">Check the balance of vault accounts</span> <br>
 <span class="tutorialcmd">&nbsp;&#36;&nbsp;rwallet vault_balance</span>
@@ -200,7 +203,7 @@ Vault Address: 4HYNqEahenrvDLUCVevLm7v1HmV7f2tECB
 	Balance: 42.0
 	Address: 15MkohW6NsPi9tcuauxFuvkqoD3GJGdA1e
 	Master Address: 18iZCwDajHjrpAirtRho7yG4YnZbuT4yvh
-	timeout: 20
+	timeout: 300 seconds (5 minutes)
 	Received transactions:
 		txhash: 96514527025978237138015757123231276653576463689488169168267055758937615537735	n: 0	value: 42
 </pre>
@@ -212,7 +215,6 @@ Vault Address: 4HYNqEahenrvDLUCVevLm7v1HmV7f2tECB
 Available vaults
 Id: 1, Address: 4HYNqEahenrvDLUCVevLm7v1HmV7f2tECB, Balance: 42.0
 Enter the id of the vault you want to transfer coins from: 1
-
 Id: 1	1GA2CMyFM8LsGfKV3JxHcUBmLocWJ9irNv
 Id: 2	15CXyWwfpdQWWDJLAR9iRE2i4HqmGvUeHt
 Id: 3	1JAZpSBHLhzxTbLgknNsHdgm7dX5qMeLvp
@@ -221,6 +223,8 @@ Enter the id of the address to send coins to: 1
 Enter the balance to transfer from 4H7RkmGw9xmTWHRkpsX2R3BMvXDGk8q9rv to 1GA2CMyFM8LsGfKV3JxHcUBmLocWJ9irNv: 3
 Transfering 3	from 4H7RkmGw9xmTWHRkpsX2R3BMvXDGk8q9rv	to 1GA2CMyFM8LsGfKV3JxHcUBmLocWJ9irNv
 </pre>
+
+<span class="tutorialtext">Wait a minute for the pending transactions to appear</span> <br>
 
 <span class="tutorialcmd">&nbsp;&#36;&nbsp;rwallet vault_pending</span>
 <pre class="tutorialoutput">
@@ -232,7 +236,7 @@ Pending Transfers
 			37 -> 4HYNqEahenrvDLUCVevLm7v1HmV7f2tECB
 </pre>
 
-<span class="tutorialtext">Wait for pending transactions If you want the transactions to go through, just wait for the confirmation period.</span> <br> <br>
+<span class="tutorialtext">If you want the transactions to go through, just wait for the confirmation period (5 minutes).</span> <br> <br>
 
 <span class="tutorialtext">For overriding the transactions from vault</span> <br>
 <span class="tutorialcmd">&nbsp;&#36;&nbsp;rwallet vault_override</span> <br>
@@ -249,13 +253,12 @@ Toaddress:  1sEDAwVcH2e5mFvjmWxXY13UCJQPqLP85
 Overriding the transaction
 </pre>
 
-<span class="tutorialtext">If you want to transfer coins from your vault account fastly</span> <br>
+<span class="tutorialtext">If you want immediate transfer coins from your vault account</span> <br>
 <span class="tutorialcmd">&nbsp;&#36;&nbsp;rwallet vault_fast_withdraw</span>
 <pre class="tutorialoutput">
 Available vaults
 Id:  1 4H7RkmGw9xmTWHRkpsX2R3BMvXDGk8q9rv:  42.0
 Enter the id of the vault you want to transfer balance from: 1
-
 Id: 1	1GA2CMyFM8LsGfKV3JxHcUBmLocWJ9irNv
 Id: 2	15CXyWwfpdQWWDJLAR9iRE2i4HqmGvUeHt
 Id: 3	1JAZpSBHLhzxTbLgknNsHdgm7dX5qMeLvp
